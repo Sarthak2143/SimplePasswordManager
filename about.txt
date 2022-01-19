@@ -5,6 +5,6 @@ Author: Shinero
 Version: v0.2
 Date of release: 19 Jan 2022
 
-Source Code: 
+Source Code: https://github.com/Sarthak2143/SimplePasswordManager
 
 Thanks, for using my password manager!
