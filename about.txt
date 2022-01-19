@@ -1,0 +1,10 @@
+This is a basic password manager written in bash.
+
+Name: Simple Password Manager
+Author: Shinero
+Version: v0.2
+Date of release: 19 Jan 2022
+
+Source Code: 
+
+Thanks, for using my password manager!
