@@ -9,7 +9,7 @@ git clone https://github.com/Sarthak2143/SimplePasswordManager
 
 cd SimplePasswordManager/
 
-chmod +x passwdmanage.sh
+chmod +x start.sh
 
 ./passwdmanage.sh 
 ```
@@ -25,7 +25,10 @@ chmod +x passwdmanage.sh
 It reads the content of the file where we're storing all the passwords and accounts name.
 
 Format:
+```
 Account Name | Password 
+
+```
 
 ### Writing passwords
 
@@ -44,9 +47,3 @@ As we all know this is digital age, and our all digital data is protected by pas
 And if you're a linux user, you know that CLI is superior and having a CLI password manager is superior than other password managers.
 
 
-## TODO
-- [x] Reading passwords 
-- [x] Adding passwords
-- [x] Generating passwords
-- [ ] Removing passwords
-- [ ] Encrypting passwords 
