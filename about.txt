@@ -2,9 +2,10 @@ This is a CLI password manager written in bash.
 
 Name: Simple Password Manager CLI
 Author: Shinero
-Version: v1.0
+Version: v1.5
 Date of release: 19 Jan 2022
 Date of release of v1: 22 Jan 2022
+Date of release of v1.5: 23 Jan 2022
 
 Featutes:
 1. Reading passwords

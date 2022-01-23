@@ -3,11 +3,42 @@ clear
 
 echo "Setting up the Simple Password Manger..."
 
+echo 'Enter your linux base: 1.Debian 2. Red Hat 3. Arch Linux btw'
+
+read option
+
+#updating
+
 echo "[+] Updating the system"
-sudo apt update
+if [ $option = "1" ];
+then
+	sudo apt update
+elif [ $option = "2" ];
+then
+	sudo dnf update
+elif [ $option = "3" ];
+then
+	sudo pacman -Syu
+else 
+	echo "Invalid Linux Base"
+fi
 clear
+
+#installing python3
+
 echo "[+] Dowloading python3"
-sudo apt install python3
+if [ $option = "1" ];
+then
+        sudo apt install python3
+elif [ $option = "2" ];
+then
+        sudo dnf install python3
+elif [ $option = "3" ];
+then
+        sudo pacman -S python3
+else 
+	echo "Invalid Linux Base"
+fi
 clear
 echo "[+] Installing cryptography module"
 sudo pip install cryptography
