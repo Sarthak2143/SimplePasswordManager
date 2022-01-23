@@ -24,10 +24,12 @@ For opening password manager type `./passwdmanage.sh`
 ├── LICENSE
 ├── README.md
 ├── about.txt
-├── crypt                             │   ├── decrypt.py
+├── crypt                             
+│   ├── decrypt.py
 │   ├── encrypt.py
 │   └── key.key
-├── passwdmanage.sh                   ├── pwds
+├── passwdmanage.sh    
+├── pwds
 │   ├── master.pwd
 │   └── passwords.txt
 └── start.sh
@@ -50,7 +52,7 @@ Format:
 ```
 Account Name | Password 
 
-\n
+
 
 
 ```
