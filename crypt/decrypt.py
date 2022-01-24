@@ -1,6 +1,6 @@
 from cryptography.fernet import Fernet
 
-with open("key.key", "rb") as f:
+with open("keys/key.key", "rb") as f:
     global key
     key = f.read()
 

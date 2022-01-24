@@ -1,2 +1,2 @@
-language = "python3"
-run = "cd crypt && python3 encrypt.py"
+language = "bash"
+run = "bash start.sh"

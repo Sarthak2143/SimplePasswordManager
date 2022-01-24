@@ -15,8 +15,20 @@ decrypt() {
         cd ..
 }
 
+master_enc() {
+        cd crypt/
+        python3 master_enc.py
+        cd ..
+}
 
-choice="Read Write Generate About Exit"
+master_dec() {
+        cd crypt/
+        python3 master_dec.py
+        cd ..
+}
+
+
+choice="Read Write Generate StrengthCheck About Exit"
 
 PS3="Enter your choice: "
 
@@ -26,6 +38,7 @@ select opt in $choice; do
         then
                 echo "Enter your master password: "
                 read master
+                master_dec
                 if [ $master = `cat pwds/master.pwd` ];
                 then
                         echo "Reading passwords..."
@@ -33,7 +46,9 @@ select opt in $choice; do
                         echo ""
                         decrypt
                         cat pwds/passwords.txt
+                        echo ""
                         encrypt
+                        master_enc
                 else
                         echo "Wrong password"
                 fi
@@ -41,6 +56,7 @@ select opt in $choice; do
         then
                 echo "Enter your master password: "
                 read master
+                master_dec
                 if [ $master = `cat pwds/master.pwd` ];
                 then
                         decrypt
@@ -53,6 +69,7 @@ select opt in $choice; do
                         sleep 0.7
                         echo "Wrote your password!"
                         encrypt
+                        master_enc
                 fi
 
         elif [ $opt = "Generate" ];
@@ -60,14 +77,20 @@ select opt in $choice; do
                 echo "Password Generator"
                 echo "Enter the length: "
                 read length
-                echo "Enter amount of passwords: "
-                read amount
-                echo "Generating Password(s)..."
+                echo "Generating Password..."
                 sleep 0.7
-                for p in $(seq 1 $amount);
+                for p in $(seq 1);
                 do
                         openssl rand -base64 48 | cut -c1-$length
                 done
+        elif [ $opt = "StrengthCheck" ];
+        then
+                echo "Password Strength Checker "
+                echo "Enter the password to check strength: "
+                read password
+                cd utils/
+                python3 passwdstrengthcheck.py $password
+                cd ..
 
         elif [ $opt = "About" ];
         then
