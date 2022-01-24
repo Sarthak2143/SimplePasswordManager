@@ -24,17 +24,23 @@ For opening password manager type `./passwdmanage.sh`
 ├── LICENSE
 ├── README.md
 ├── about.txt
-├── crypt                             
+├── crypt
 │   ├── decrypt.py
 │   ├── encrypt.py
-│   └── key.key
-├── passwdmanage.sh    
+│   ├── keys
+│   │   ├── key.key
+│   │   └── master_pwd.key
+│   ├── master_dec.py
+│   └── master_enc.py
+├── passwdmanage.sh
 ├── pwds
-│   ├── master.pwd
 │   └── passwords.txt
-└── start.sh
+├── start.sh
+└── utils
+    ├── common.txt
+    └── passwdstrengthcheck.py
 
-2 directories, 10 files
+4 directories, 14 files
 ```
 
 ## Features
